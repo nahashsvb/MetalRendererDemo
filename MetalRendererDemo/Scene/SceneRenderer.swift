@@ -8,6 +8,11 @@
 import Foundation
 import MetalKit
 
+struct AspectUniforms {
+    var screenAspectRatio: Float
+    var textureAspectRatio: Float
+}
+
 protocol Renredable {
     func render(_ texture: MTLTexture, with filter: MetalTextureFilter?, to outputTexture: MTLTexture, currentDrawable: CAMetalDrawable, aspect: AspectUniforms)
 }

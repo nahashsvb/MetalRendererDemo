@@ -7,16 +7,13 @@
 
 import UIKit
 
-/// Root view conroller router
 final class AppRouter {
-    // MARK: Lifecycle
 
     init(window: UIWindow) {
         self.window = window
         self.processLaunch()
     }
 
-    // MARK: Private
     private let window: UIWindow
     
     private func processLaunch() {

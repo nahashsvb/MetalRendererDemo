@@ -27,12 +27,14 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupSceneController()
+        setupSceneController()
+        setupFiltersController()
     }
     
-    private let sceneViewController: SceneViewController? = nil
+    private var sceneViewController: SceneViewController? = nil
     private var device: MTLDevice? = nil
     private var filters: [MetalTextureFilter] = []
+    private var currentTexture: MTLTexture? = nil
     
     private func setupSceneController() {
         guard let device = device else {
@@ -53,7 +55,33 @@ class HomeViewController: UIViewController {
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(200)
         }
         if let texture = UIImage.mtlTexture(named: "example1") {
+            self.currentTexture = texture
             sceneViewController.updateWith(texture: texture, filter: filter)
+        }
+        self.sceneViewController = sceneViewController
+    }
+    
+    private func setupFiltersController() {
+        guard let device = device else {
+            fatalError("device is nil")
+        }
+        
+        let filtersController = FiltersViewController(device: device,
+                              filters: filters) { [weak self] filter in
+            guard let self = self else { return }
+            guard let sceneViewController = sceneViewController else { return }
+            guard let texture = self.currentTexture else { return }
+            
+            sceneViewController.updateWith(texture: texture, filter: filter)
+        }
+        
+        addChild(filtersController)
+        view.addSubview(filtersController.view)
+        filtersController.didMove(toParent: self)
+        filtersController.view.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            make.height.equalTo(200)
         }
     }
 }

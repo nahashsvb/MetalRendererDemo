@@ -22,6 +22,7 @@
 		851C96B62A81DA6900717D5B /* UIImage+MTLTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C96B52A81DA6900717D5B /* UIImage+MTLTexture.swift */; };
 		851C96B92A81DB7400717D5B /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C96B82A81DB7400717D5B /* HomeModule.swift */; };
 		851C96BF2A81E04000717D5B /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C96BE2A81E04000717D5B /* FiltersViewController.swift */; };
+		859AD2EC2A81EA9500A4E400 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859AD2EB2A81EA9500A4E400 /* FilterCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		851C96B52A81DA6900717D5B /* UIImage+MTLTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+MTLTexture.swift"; sourceTree = "<group>"; };
 		851C96B82A81DB7400717D5B /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
 		851C96BE2A81E04000717D5B /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		859AD2EB2A81EA9500A4E400 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				851C96BE2A81E04000717D5B /* FiltersViewController.swift */,
+				859AD2EB2A81EA9500A4E400 /* FilterCollectionViewCell.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				851C968E2A817FFF00717D5B /* AppDelegate.swift in Sources */,
 				851C96902A817FFF00717D5B /* SceneDelegate.swift in Sources */,
 				851C96AE2A8196CF00717D5B /* Filters.swift in Sources */,
+				859AD2EC2A81EA9500A4E400 /* FilterCollectionViewCell.swift in Sources */,
 				851C96AC2A81949C00717D5B /* SceneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

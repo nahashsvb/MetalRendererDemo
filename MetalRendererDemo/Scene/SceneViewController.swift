@@ -7,11 +7,6 @@
 
 import MetalKit
 
-struct AspectUniforms {
-    var screenAspectRatio: Float
-    var textureAspectRatio: Float
-}
-
 protocol Filterable {
     func updateWith(texture: MTLTexture, filter: MetalTextureFilter?)
 }
