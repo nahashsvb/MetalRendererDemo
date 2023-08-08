@@ -52,9 +52,9 @@ class HomeViewController: UIViewController {
         sceneViewController.view.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(200)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(100)
         }
-        if let texture = UIImage.mtlTexture(named: "example1") {
+        if let texture = UIImage.mtlTexture(named: "example") {
             self.currentTexture = texture
             sceneViewController.updateWith(texture: texture, filter: filter)
         }
@@ -62,12 +62,16 @@ class HomeViewController: UIViewController {
     }
     
     private func setupFiltersController() {
+        guard let currentTexture = currentTexture else {
+            fatalError("currentTexture is nil")
+        }
         guard let device = device else {
             fatalError("device is nil")
         }
         
         let filtersController = FiltersViewController(device: device,
-                              filters: filters) { [weak self] filter in
+                                                      filters: filters,
+                                                      currentTexture:currentTexture) { [weak self] filter in
             guard let self = self else { return }
             guard let sceneViewController = sceneViewController else { return }
             guard let texture = self.currentTexture else { return }
@@ -81,7 +85,7 @@ class HomeViewController: UIViewController {
         filtersController.view.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-            make.height.equalTo(200)
+            make.height.equalTo(100)
         }
     }
 }

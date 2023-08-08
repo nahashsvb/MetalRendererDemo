@@ -70,8 +70,8 @@ fragment float4 gaussianBlurFragment(Vertex fragmentIn [[ stage_in ]],
 //    float4 color = texture.sample(qsampler, coordinates);
     float width = texture.get_width();
     float height = texture.get_width();
-    float xPixel = (1 / width) * 3;
-    float yPixel = (1 / height) * 2;
+    float xPixel = (1 / width) * 5;
+    float yPixel = (1 / height) * 3;
     
     
     float3 sum = float3(0.0, 0.0, 0.0);

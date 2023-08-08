@@ -23,6 +23,7 @@
 		851C96B92A81DB7400717D5B /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C96B82A81DB7400717D5B /* HomeModule.swift */; };
 		851C96BF2A81E04000717D5B /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C96BE2A81E04000717D5B /* FiltersViewController.swift */; };
 		859AD2EC2A81EA9500A4E400 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859AD2EB2A81EA9500A4E400 /* FilterCollectionViewCell.swift */; };
+		859AD2EE2A823FFE00A4E400 /* OffscreenRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859AD2ED2A823FFE00A4E400 /* OffscreenRenderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		851C96B82A81DB7400717D5B /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
 		851C96BE2A81E04000717D5B /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		859AD2EB2A81EA9500A4E400 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		859AD2ED2A823FFE00A4E400 /* OffscreenRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffscreenRenderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				851C96AB2A81949C00717D5B /* SceneViewController.swift */,
 				851C96A72A8193CB00717D5B /* SceneRenderer.swift */,
+				859AD2ED2A823FFE00A4E400 /* OffscreenRenderer.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				851C96A22A81819B00717D5B /* AppRouter.swift in Sources */,
 				851C96B22A81A2E400717D5B /* Filters.metal in Sources */,
 				851C96A82A8193CB00717D5B /* SceneRenderer.swift in Sources */,
+				859AD2EE2A823FFE00A4E400 /* OffscreenRenderer.swift in Sources */,
 				851C96B62A81DA6900717D5B /* UIImage+MTLTexture.swift in Sources */,
 				851C96BF2A81E04000717D5B /* FiltersViewController.swift in Sources */,
 				851C96B92A81DB7400717D5B /* HomeModule.swift in Sources */,
@@ -376,7 +380,7 @@
 				INFOPLIST_FILE = MetalRendererDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,7 +406,7 @@
 				INFOPLIST_FILE = MetalRendererDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
